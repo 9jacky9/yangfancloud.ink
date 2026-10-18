@@ -52,8 +52,8 @@ a:hover {
   text-decoration: underline;
 }
 
-.ink-logo-link, .ink-logo-link:visited,
-.ink-btn, .ink-btn:visited,
+.ink-logo-link, .ink-logo-link:visited, .ink-logo-link:hover,
+.ink-btn, .ink-btn:visited, .ink-btn:hover, .ink-btn:focus, .ink-btn:active,
 .ink-footer-a, .ink-footer-a:visited {
   text-decoration: none;
 }
@@ -147,7 +147,8 @@ a:hover {
 }
 
 /* ================= BUTTONS ================= */
-.ink-btn {
+.ink-btn,
+a.ink-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -160,31 +161,76 @@ a:hover {
   transition: all 0.25s ease;
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none !important;
 }
 
-.ink-btn-cinnabar {
+.ink-btn:hover,
+.ink-btn:focus,
+.ink-btn:active,
+.ink-btn:visited,
+a.ink-btn:hover,
+a.ink-btn:focus,
+a.ink-btn:active,
+a.ink-btn:visited {
+  text-decoration: none !important;
+}
+
+/* Primary Button (Cinnabar / btn-primary) */
+.ink-btn-cinnabar,
+.ink-btn-cinnabar:visited,
+.btn-primary,
+.btn-primary:visited,
+a.ink-btn-cinnabar,
+a.ink-btn-cinnabar:visited,
+a.btn-primary,
+a.btn-primary:visited {
   background: var(--cinnabar);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   border: 1px solid var(--cinnabar);
   box-shadow: 0 4px 14px rgba(200, 60, 35, 0.2);
+  text-decoration: none !important;
 }
 
-.ink-btn-cinnabar:hover {
+.ink-btn-cinnabar:hover,
+.ink-btn-cinnabar:focus,
+.ink-btn-cinnabar:active,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+a.ink-btn-cinnabar:hover,
+a.ink-btn-cinnabar:focus,
+a.ink-btn-cinnabar:active,
+a.btn-primary:hover,
+a.btn-primary:focus,
+a.btn-primary:active {
   background: var(--cinnabar-hover);
+  color: #FFFFFF !important;
   border-color: var(--cinnabar-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(200, 60, 35, 0.3);
+  text-decoration: none !important;
 }
 
-.ink-btn-outline {
+/* Secondary Button (Outline) */
+.ink-btn-outline,
+.ink-btn-outline:visited,
+a.ink-btn-outline,
+a.ink-btn-outline:visited {
   background: transparent;
-  color: var(--ink-deep);
+  color: var(--ink-deep) !important;
   border: 1px solid var(--ink-black);
+  text-decoration: none !important;
 }
 
-.ink-btn-outline:hover {
+.ink-btn-outline:hover,
+.ink-btn-outline:focus,
+.ink-btn-outline:active,
+a.ink-btn-outline:hover,
+a.ink-btn-outline:focus,
+a.ink-btn-outline:active {
   background: var(--ink-deep);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
   transform: translateY(-2px);
 }
 
